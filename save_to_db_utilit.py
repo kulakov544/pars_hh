@@ -15,9 +15,6 @@ def save_to_db(vacancies_df):
     # Название таблицы
     table_name = "stage_pars_hh"
 
-    engine = create_engine(db_url)
-    create_table(engine, table_name)
-
     dtype = {
         'vacancy_id': String,
         'premium': Boolean,
@@ -55,4 +52,16 @@ def save_to_db(vacancies_df):
         'vacancy_hash': String,
     }
 
-    vacancies_df.to_sql(table_name, engine, if_exists='append', index=False, dtype=dtype)
+    try:
+        engine = create_engine(db_url)
+        conn = engine.connect()
+    except Exception as e:
+        raise Exception(f'Невозможно установить соединение с сервером: {str(e)}')
+    else:
+        try:
+            vacancies_df.to_sql(table_name, engine, if_exists='replace', index=False, dtype=dtype)
+        except Exception as e:
+            raise e
+        finally:
+            conn.close()
+            engine.dispose()

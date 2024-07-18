@@ -2,13 +2,14 @@ import time
 import json
 import pandas as pd
 import requests
+from pandas import DataFrame
 
 from logger_utilit import logger
-from generate_hash_utilit import generate_hash
+from add_hash_to_df_utilit import add_hash_to_df
 
 
 @logger.catch()
-def get_vacancies(all_params):
+def get_vacancies(all_params: dict) -> DataFrame:
     """
     Функция получает json с данными о списке вакансий
     :param all_params: params - список параметров для запроса
@@ -30,7 +31,7 @@ def get_vacancies(all_params):
                 'vacancy_id': str(v.get('id')),
                 'premium': bool(v.get('premium')),
                 'name': str(v.get('name')),
-                'department': str(v.get('department')),
+                'department': str(v.get('department')["name"] if v.get('department') is not None else None),
                 'has_test': bool(v.get('has_test')),
                 'response_letter_required': bool(v.get('response_letter_required')),
                 'area': str(v.get('area')['name']),
@@ -64,7 +65,6 @@ def get_vacancies(all_params):
                 'accept_incomplete_resumes': bool(v.get('accept_incomplete_resumes')),
                 'experience': str(v.get('experience')["name"]),
                 'employment': str(v.get('employment')["name"]),
-                'vacancy_hash': str(generate_hash(v))
             } for v in data["items"]])
 
             all_vacancies_df = pd.concat([all_vacancies_df, vacancies_df], ignore_index=True)
@@ -75,11 +75,15 @@ def get_vacancies(all_params):
 
             params["page"] += 1
             time.sleep(1)  # Задержка между страницами
+
         time.sleep(3)  # Задержка между наборами параметров
 
-        #all_vacancies_df.drop_duplicates(subset=['vacancy_id'], inplace=True)
+        all_vacancies_df.drop_duplicates(subset=['vacancy_id'], inplace=True)
+        logger.info(f"Собрано {len(all_vacancies_df)} вакансий")
 
-        logger.info(f"Собрано {len(all_vacancies_df)} вакансий и сохранено в базу данных")
+        all_vacancies_df = add_hash_to_df(all_vacancies_df)
+
+
 
 
     return all_vacancies_df
