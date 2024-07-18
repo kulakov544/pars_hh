@@ -1,7 +1,6 @@
-from sqlalchemy import create_engine, Column, String, Float, Boolean, DateTime, JSON, MetaData, Table, types
+from sqlalchemy import create_engine, String, Float, Boolean
 
 from logger_utilit import logger
-from create_table_utilit import create_table
 from config import db_url
 
 
