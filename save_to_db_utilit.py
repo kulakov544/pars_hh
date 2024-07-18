@@ -59,7 +59,7 @@ def save_to_db(vacancies_df):
         raise Exception(f'Невозможно установить соединение с сервером: {str(e)}')
     else:
         try:
-            vacancies_df.to_sql(table_name, engine, if_exists='replace', index=False, dtype=dtype)
+            vacancies_df.to_sql(table_name, conn, if_exists='replace', index=False, dtype=dtype)
         except Exception as e:
             raise e
         finally:
