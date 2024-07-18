@@ -1,11 +1,12 @@
 from sqlalchemy import create_engine, String, Float, Boolean
+from pandas import DataFrame
 
 from logger_utilit import logger
 from config import db_url
 
 
 @logger.catch()
-def save_to_db(vacancies_df):
+def save_to_db(vacancies_df: DataFrame):
     """
     Функция сохраняет вакансии в базу
     :param vacancies_df: Список вакансий

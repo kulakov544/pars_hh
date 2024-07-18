@@ -1,5 +1,4 @@
 import hashlib
-import pandas as pd
 
 from pandas import DataFrame
 
@@ -9,10 +8,10 @@ def add_hash_to_df(df: DataFrame,
                    encoding: str = 'utf-8') -> DataFrame:
     """
     Функция генерирует хеш по вакансиям.
-    :param df: Датафрейм
+    :param df: Дата фрейм
     :param hash_column_name: имя нового столбца с хешем
     :param encoding: кодировка
-    :return: датафрейм со столбцом хешей
+    :return: дата фрейм со столбцом хешей
     """
 
     def row_to_hash(row):
@@ -25,4 +24,3 @@ def add_hash_to_df(df: DataFrame,
 
     df[hash_column_name] = df.apply(row_to_hash, axis=1)
     return df
-

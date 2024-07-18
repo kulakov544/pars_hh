@@ -4,11 +4,11 @@ import requests
 from pandas import DataFrame
 
 from logger_utilit import logger
-from add_hash_to_df_utilit import add_hash_to_df
+from utilits.add_hash_to_df_utilit import add_hash_to_df
 
 
 @logger.catch()
-def get_vacancies(all_params: dict) -> DataFrame:
+def get_vacancies(all_params: list) -> DataFrame:
     """
     Функция получает json с данными о списке вакансий
     :param all_params: params - список параметров для запроса
@@ -68,7 +68,6 @@ def get_vacancies(all_params: dict) -> DataFrame:
 
             all_vacancies_df = pd.concat([all_vacancies_df, vacancies_df], ignore_index=True)
 
-
             if params["page"] >= data["pages"] - 1:
                 break
 
@@ -82,8 +81,4 @@ def get_vacancies(all_params: dict) -> DataFrame:
 
         all_vacancies_df = add_hash_to_df(all_vacancies_df)
 
-
-
-
     return all_vacancies_df
-

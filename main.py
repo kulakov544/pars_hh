@@ -1,6 +1,6 @@
-from logger_utilit import logger
-from get_vacancies_utilit import get_vacancies
-from save_to_db_utilit import save_to_db
+from utilits.logger_utilit import logger
+from utilits.get_vacancies_utilit import get_vacancies
+from utilits.save_to_db_utilit import save_to_db
 
 
 if __name__ == "__main__":
