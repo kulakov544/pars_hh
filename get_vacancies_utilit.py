@@ -11,7 +11,7 @@ from generate_hash_utilit import generate_hash
 def get_vacancies(all_params):
     """
     Функция получает json с данными о списке вакансий
-    :param params: params - список параметров для запроса
+    :param all_params: params - список параметров для запроса
     :return: all_vacancies - df с данными о списке вакансий
     """
     url = "https://api.hh.ru/vacancies"
