@@ -1,9 +1,12 @@
 import time
+
+
 import pandas as pd
 import requests
 from pandas import DataFrame
+import json
 
-from logger_utilit import logger
+from utilits.logger_utilit import logger
 from utilits.add_hash_to_df_utilit import add_hash_to_df
 
 
@@ -27,15 +30,16 @@ def get_vacancies(all_params: list) -> DataFrame:
 
             # Создание DataFrame из списка вакансий
             vacancies_df = pd.DataFrame([{
-                'vacancy_id': str(v.get('id')),
+                'vacancy_id': int(v.get('id')),
                 'premium': bool(v.get('premium')),
                 'name': str(v.get('name')),
                 'department': str(v.get('department')["name"] if v.get('department') is not None else None),
                 'has_test': bool(v.get('has_test')),
                 'response_letter_required': bool(v.get('response_letter_required')),
                 'area': str(v.get('area')['name']),
-                'salary_from': v.get('salary')['from'] if v.get('salary') is not None else 0,
-                'salary_to': v.get('salary')["to"] if v.get('salary') is not None else 0,
+                'salary_from': int(v.get('salary')['from'] if v.get('salary') and v.get('salary')['from'] is not None else 0),
+                'salary_to': int(v.get('salary')['to'] if v.get('salary') and v.get('salary')['to'] is not None else 0),
+                'salary_currency': str(v.get('salary')["currency"] if v.get('salary') and v.get('salary')['currency'] is not None else 0),
                 'type': str(v.get('type')['name']),
                 'response_url': str(v.get('response_url')),
                 'sort_point_distance': str(v.get('sort_point_distance')),
@@ -47,7 +51,7 @@ def get_vacancies(all_params: list) -> DataFrame:
                 'url': str(v.get('url')),
                 'alternate_url': str(v.get('alternate_url')),
                 'employer_name': str(v.get('employer')["name"]),
-                'employer_url': str(v.get('employer')["alternate_url"]),
+                'employer_url': str(v.get('employer', {}).get("url", '')),
                 'snippet_requirement': str(v.get('snippet')["requirement"]),
                 'snippet_responsibility': str(v.get('snippet')["responsibility"]),
                 'contacts': str(v.get('contacts')),
