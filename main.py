@@ -40,3 +40,6 @@ if __name__ == "__main__":
     update_core()
 
     logger.info(f"Собрано {len(vacancies_df)} вакансий и сохранено в базу данных")
+
+
+
