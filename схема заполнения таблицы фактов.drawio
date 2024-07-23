@@ -1,0 +1,71 @@
+<mxfile host="Electron" modified="2024-07-22T09:08:44.617Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="0GM_1B3jxYAnOQBPlGcQ" version="24.6.4" type="device">
+  <diagram name="Страница — 1" id="CI0lk4u1oNamDWM2T9ZI">
+    <mxGraphModel dx="1372" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-1" target="SjxG8jCdj-W0v5yeUmD_-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-1" target="SjxG8jCdj-W0v5yeUmD_-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-1" target="SjxG8jCdj-W0v5yeUmD_-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="285" />
+              <mxPoint x="170" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-1" value="id_vacancy 10&lt;div&gt;hash xy10&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-2" target="SjxG8jCdj-W0v5yeUmD_-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-2" value="нет такого id" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-4" value="записываем строку в фактовую таблицу" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-6" target="SjxG8jCdj-W0v5yeUmD_-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-6" value="id есть хеши совпадают" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-7" value="ничего не делаем" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-9" target="SjxG8jCdj-W0v5yeUmD_-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-9" target="SjxG8jCdj-W0v5yeUmD_-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SjxG8jCdj-W0v5yeUmD_-9" target="SjxG8jCdj-W0v5yeUmD_-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="395" />
+              <mxPoint x="340" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-9" value="id есть, но хеши не совпадают" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-10" value="удалим строчку и запишем новую" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-11" value="Взять строку из таблицы фактов, скопировать в другую таблицу(historu fact) добавляя дату переноса. а новую вставить в таблицу фактов" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="420" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SjxG8jCdj-W0v5yeUmD_-12" value="через begin_date и end_date" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="554.5" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
