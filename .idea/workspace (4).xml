@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c8cf46a-4c69-4195-a218-c0494c288711" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/utilits/connect_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilits/create_calendar_utilit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilits/get_chat_id_utilit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilits/log_to_telebot_utilit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilits/update_core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilits/get_vacancies_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilits/get_vacancies_utilit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilits/save_to_db_utilit.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.create_calendar_utilit.executor": "Run",
+    "git-widget-placeholder": "update"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
