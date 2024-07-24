@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 from pandas import DataFrame
 import time
+import json
 
 from utilits.logger_utilit import logger
 from utilits.add_hash_to_df_utilit import add_hash_to_df
@@ -22,6 +23,13 @@ def get_vacancies(all_params: list) -> DataFrame:
             try:
                 response = requests.get(url, params=params)
                 response.raise_for_status()  # Возбуждает исключение для ошибок HTTP
+
+                # При необходимости можно сохранить ответ в файл и посмотреть какие данные должны быть включены в
+                # датафрейм
+                # filename = f"vacancies_response_{params.get('page', 0)}.json"
+                # with open(filename, 'w', encoding='utf-8') as f:
+                # json.dump(response.json(), f, ensure_ascii=False, indent=4)
+
                 data = response.json()
                 logger.info(f"Собрано {len(data.get("items", []))} вакансий")
             except requests.RequestException as e:
@@ -63,7 +71,7 @@ def get_vacancies(all_params: list) -> DataFrame:
                         'url': str(v.get('url')),
                         'alternate_url': str(v.get('alternate_url')),
                         'employer_name': str(v.get('employer')["name"]),
-                        'employer_url': str(v.get('employer', {}).get("url", '')),
+                        'employer_url': str(v.get('employer', {}).get("alternate_url", '')),
                         'snippet_requirement': str(v.get('snippet')["requirement"]),
                         'snippet_responsibility': str(v.get('snippet')["responsibility"]),
                         'contacts': str(v.get('contacts')),
