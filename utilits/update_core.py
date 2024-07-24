@@ -1,4 +1,7 @@
-from utilits.connect_database import execute_stmt
+import pandas as pd
+
+from utilits.connect_database import execute_stmt, put_data, get_data
+from utilits.get_rates_utilit import get_rates
 
 
 def update_core():
@@ -9,4 +12,3 @@ def update_core():
     # Обновление fact_vacancy
     sqlt_stmt = "SELECT core.update_fact_vacancy();"
     execute_stmt(sqlt_stmt)
-
