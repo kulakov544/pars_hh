@@ -8,7 +8,7 @@ from utilits.logger_utilit import logger
 
 if __name__ == "__main__":
     # ID больших городов России
-    big_cities_ids = [5, 6]
+    big_cities_ids = [5, 6, 3]
     text_search = ['python']
 
     # Список параметров поиска
