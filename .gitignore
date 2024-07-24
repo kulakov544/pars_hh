@@ -128,6 +128,7 @@ kulakovav.ru
 # Environments
 .env
 .venv
+.idea
 env/
 venv/
 ENV/

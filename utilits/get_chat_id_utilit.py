@@ -1,5 +1,7 @@
 import requests
 
+from utilits.logger_utilit import logger
+
 
 def get_chat_id(token: str) -> int:
     # URL для запроса getUpdates
@@ -10,7 +12,7 @@ def get_chat_id(token: str) -> int:
         response = requests.get(url)
         data = response.json()
     except Exception as e:
-        print(e)
+        logger.error(e)
     else:
         # Получаем CHAT_ID из результата
         if 'result' in data:
@@ -18,4 +20,4 @@ def get_chat_id(token: str) -> int:
                 chat_id = result['message']['chat']['id']
                 return chat_id
         else:
-            print("No chat_id found")
+            logger.error("No chat_id found")

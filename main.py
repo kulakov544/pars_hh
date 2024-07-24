@@ -8,7 +8,7 @@ from utilits.logger_utilit import logger
 
 if __name__ == "__main__":
     # ID больших городов России
-    big_cities_ids = [3, 4]
+    big_cities_ids = [5, 6]
     text_search = ['python']
 
     # Список параметров поиска
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     schema = "stage"
 
     # Загрузка данных в stage
-    logger.info('Загрузка данных в stage. {}', vacancies_df)
+    logger.info('Загрузка данных в stage.')
     put_data(vacancies_df, table_name, schema, 'replace')
 
     # Обновление core
