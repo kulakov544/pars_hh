@@ -37,7 +37,7 @@ def get_rates_cb(max_retries=10, wait_time=10) -> DataFrame:
             date_published = pd.to_datetime(date_published, format='%d.%m.%Y').strftime('%Y-%m-%d')
 
             # Список валют для получения курса
-            target_currencies = {'USD', 'EUR'}
+            target_currencies = {'USD', 'EUR', 'AZN', 'BYR', 'GEL', 'KGS', 'KZT', 'UZS'}
 
             # Парсинг данных
             for child in root.findall('Valute'):
@@ -89,7 +89,7 @@ def get_and_put_rates():
     # Фильтрация записей, которые уже присутствуют в базе
     result_rates = new_rates[~new_rates['date'].isin(existing_rates['date'])]
 
-    # Загружаем ку
+    # Загружаем курсы в базу
     if not result_rates.empty:
         put_data(result_rates, table_name='rates', schema='core', if_exists='append')
 
