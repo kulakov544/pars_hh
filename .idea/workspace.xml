@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29201b17-9764-4630-90ac-5fe50b381418" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/utilits/get_vacancies_id_utilit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vacancies_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilits/get_vacancies_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilits/get_vacancies_data_utilit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vacancies_response_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vacancies_response_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vacancies_response_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vacancies_response_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/схема второго слоя базы данных для pars_hh.drawio" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +61,20 @@
     "Python.excel_to_bd_utilit.executor": "Run",
     "Python.get_chat_id_utilit.executor": "Run",
     "Python.get_rates_utilit.executor": "Run",
+    "Python.get_vacancies_data_utilit.executor": "Run",
+    "Python.get_vacancies_id_utilit.executor": "Run",
     "Python.get_vacancies_utilit.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "update",
-    "last_opened_file_path": "D:/YandexDisk/Programm/test_speed",
+    "last_opened_file_path": "D:/YandexDisk/Programm/pars_hh/utilits",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YandexDisk\Programm\pars_hh\utilits" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\YandexDisk\Programm\pars_hh1\utilits" />
     </key>
