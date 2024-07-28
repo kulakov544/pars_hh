@@ -2,13 +2,14 @@ import pandas as pd
 import requests
 from pandas import DataFrame
 import time
+import random
 
 
 def get_vacancies_id(all_params: list) -> DataFrame:
     """
     Функция составляет список id вакансий.
     :param all_params: Список параметров для запроса.
-    :return: DataFrame с данными о вакансиях.
+    :return: DataFrame с id вакансий
     """
     url = "https://api.hh.ru/vacancies"
     all_vacancies_id_df = pd.DataFrame()
