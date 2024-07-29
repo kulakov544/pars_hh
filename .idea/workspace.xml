@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29201b17-9764-4630-90ac-5fe50b381418" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/Authorization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/authorization_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/draft.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.$Сжемы базы данных.drawio.bkp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.$Схемы базы данных.drawio.bkp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.$схема второго слоя базы данных для pars_hh.drawio.bkp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/vacancies_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vacancies_skill.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/create_calendar_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/create_calendar_utilit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilits/create_calendar_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/create_calendar_utilit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilits/excel_to_bd_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/excel_to_bd_utilit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilits/get_vacancies_data_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilits/get_vacancies_data_utilit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilits/get_vacancies_id_utilit.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilits/get_vacancies_id_utilit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vacancies_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/vacancies_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vacancies_skill.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/vacancies_skill.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,8 +4,6 @@ from utilits.connect_database import put_data
 from utilits.update_core import update_core
 from utilits.logger_utilit import logger
 
-#from utilits.log_to_telebot_utilit import logger    #при подключении отправляет логи с ошибками в тг pars_hh544_bot
-
 
 def chunk_list(lst, chunk_size):
     """Разбить список на подсписки фиксированного размера."""
@@ -29,13 +27,15 @@ if __name__ == "__main__":
                     {"text": search_text, "area": city_id, "per_page": 100, "page": 0, 'specialization': specializ}
                 )
 
-    # Обработка параметров поиска пакетами по 500 штук
-    for search_params_chunk in chunk_list(search_params_list, 500):
-            # Сбор id вакансий
-            logger.info('Начало сбора id вакансий')
-            vacancies_id_df = get_vacancies_id(search_params_list)
-            logger.info(f"Всего собрано {len(vacancies_id_df)} id вакансий")
 
+    # Сбор id вакансий
+    logger.info('Начало сбора id вакансий')
+    vacancies_id_df = get_vacancies_id(search_params_list)
+    logger.info(f"Всего собрано {len(vacancies_id_df)} id вакансий")
+
+    if len(vacancies_id_df) > 1:
+        # Обработка параметров поиска пакетами по 500 штук
+        for search_params_chunk in chunk_list(vacancies_id_df, 500):
             # Сбор данных по вакансиям
             vacancies_data_df, vacancies_skill_df = get_vacancies_data(vacancies_id_df)
 
@@ -53,9 +53,10 @@ if __name__ == "__main__":
 
             # Обновление core
             logger.info("Перенос данных в core")
-            #update_core()
+            update_core()
 
             logger.info(f"Собрано {len(vacancies_data_df)} вакансий и сохранено в базу данных")
-
+    else:
+        logger.error("Вакансии не найдены")
 
 
