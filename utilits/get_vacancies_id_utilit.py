@@ -5,7 +5,7 @@ import time
 import random
 
 
-def get_vacancies_id(all_params: list) -> DataFrame:
+def get_vacancies_id(all_params: list, uniq_id: set) -> DataFrame:
     """
     Функция составляет список id вакансий.
     :param all_params: Список параметров для запроса.
@@ -38,10 +38,14 @@ def get_vacancies_id(all_params: list) -> DataFrame:
             vacancies_data = []
             for v in data.get("items", []):
                 try:
-                    vacancy = {
-                        'vacancy_id': int(v.get('id'))
-                    }
-                    vacancies_data.append(vacancy)
+                    vacancy_id = int(v.get('id'))
+
+                    # Обновление множества уникальных ID
+                    if vacancy_id not in uniq_id:
+                        uniq_id.add(vacancy_id)
+                        vacancy = {'vacancy_id': vacancy_id}
+                        vacancies_data.append(vacancy)
+                        print(len(uniq_id))
                 except Exception as e:
                     print(f"Ошибка обработки данных id вакансии: {e}")
 
@@ -59,8 +63,5 @@ def get_vacancies_id(all_params: list) -> DataFrame:
             time.sleep(0.1)  # Задержка между страницами
 
         time.sleep(0.3)  # Задержка между наборами параметров
-
-    # Удаление дубликатов
-    all_vacancies_id_df.drop_duplicates(subset=['vacancy_id'], inplace=True)
 
     return all_vacancies_id_df
